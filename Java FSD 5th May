@@ -1,0 +1,23 @@
+1.what is the purpose of having 2 jre folders one inside and other outside??.
+Ans: Private JRE: Normally when we install any JDK ,it comes up with a default JRE.
+                            :Is necessary to run the JDK.      
+                            :Required to run the tools included with JDK.
+         PUblic JRE: This can be installed separately.
+                           :will be used by other java application used by JDK.
+                          :It is registed with  windows registry.
+
+2.how many ways we can write  main method inside a java class?
+Ans: 1.Public static void main(String args[]) 2.static public void main(String [] y)
+          3. static public void main (String args[])
+
+3. what is variable argument?
+Ans: The variable argument behaves like an array of specific type. java compalier matches the arg from left to right once it reaches the last arg parameter , it creates an array of remaining arguments and pass it to the method,
+
+4.Print a to z using for loop.
+          Ans:public class letters{
+                   public static void main{String[] args){
+                    letter i;
+                    for(i='a'; i<='z';i++)
+                       System.out.println( i + " ");
+                        }
+  }
