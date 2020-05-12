@@ -1,0 +1,112 @@
+1)Can I add list into another list?
+Insert all elements from one list to another. It is possible to add all elements from one list into another list. We can add by using the List addAll() method. The resulting List is the union of the two lists.
+
+Example to append one list to another list:
+
+public class AppendList{
+       public static void main(String args[]){
+ArrayList<String> s1=new ArrayList<String>();
+                      s1.add(“Janu”);
+                      s1.add(“Susrutha”);
+                      s1.add(“kavya”);
+System.out.println(“ArrayList Elements are: “+s1);
+
+                      List<String> s2=new ArrayList<String>();
+                      s2.add(“Girija”);
+                      s2.add(“Teena”);
+                      s2.add(“Dimpu”);
+                      s1.addAll(s2);
+System.out.println(“Updated list elements are” +s2);
+           }
+     }
+
+
+2)can I add list into map or set?
+
+Adding list to map:
+Get the List to be converted into Map
+Convert the List into stream using List.stream() method
+Create map with the help of Collectors.toMap() method
+Collect the formed Map using stream.collect() method
+Return the formed Map
+
+
+class Student { 
+
+	private Integer id;
+	private String courses;
+	public Student(Integer id, String courses) 
+	{ 
+		this.id = id;
+		this.courses = courses; 
+	} 
+
+	public Integer getId() 
+	{ 
+		return id;
+	} 
+	public String getCourses() 
+	{ 
+		return courses;
+	} 
+} 
+
+public class AddingListToMap { 
+	public static void main(String[] args) 
+	{ 
+		List<Student>s1 = new ArrayList<>(); 
+
+		s1.add(new Student(1, "Java")); 
+		s1.add(new Student(2, "Selenium")); 
+		s1.add(new Student(3, "Sql")); 
+
+
+		LinkedHashMap<Integer, String>
+			map = s1.stream() 
+.collect( 
+						Collectors 
+							.toMap( 
+								Student::getId, 
+								Student::getName, 
+								(x, y) 
+									-> x + ", " + y, 
+								LinkedHashMap::new)); 
+		map.forEach( 
+			(x, y) ->System.out.println(x + "=" + y));
+	} 
+}
+
+
+Adding List to Set:
+We can't add a list to a set because lists are mutable, meaning that we can change the contents of the list after adding it to the set. A set as an unordered collection of distinct hashable objects.
+
+
+
+3 for(Map.Entry o:m.entryset()){
+System.out.println(o);
+               }
+Map.entrySet() method returns a collection-view(Set<Map.Entry<K, V>>) of the mappings contained in this map. We can iterate using key-value pair using getKey() and getValue() methods of Map.Entry<K, V>. This method is most common and should be used if you need both map keys and values in the loop.
+
+Example:
+  
+class Demo
+{ 
+    public static void main(String[] arg) 
+    { 
+        Map<String,String>s1 = new HashMap<String,String>();
+        s1.put("Atos", "myatossyntel.net"); 
+        s1.put("equip", "equip-das.myatos-syntel.net");
+         
+        for (Map.Entry<String,String> entry : s1.entrySet())  
+            System.out.println("Key = " + entry.getKey() + 
+                             ", Value = " + entry.getValue()); 
+    } 
+} 
+
+4)Comparator
+Java Comparator interface is used to order the objects of a user-defined class.This interface is found in java.util package and contains 2 methods compare(Object obj1,Object obj2) and equals(Object element).
+It provides multiple sorting sequences, i.e., we can sort the elements on the basis of any data member, for example, rollno, name, age e,t.c.
+5)d.push(“welcome”);d.push(“hllo”);  d.push(“alpha”);System.out.println(d.pop());System.out.println(d.pop());
+alpha,hello
+
+
