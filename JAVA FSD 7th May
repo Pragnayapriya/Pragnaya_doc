@@ -1,1 +1,64 @@
 
+7th MAY TASK
+1)Notepad, OS, users, implement interface concept?
+ Ans:  Public Interface Notepad{
+                                                 Public abstract void New();
+                                                 Public abstract void Open();
+                                                }
+    Public class Windows implements Notepad{
+                                                Public void open() {
+                                                                                     System.out.println(“click on open”);
+                                                                                   }
+                                                Public void New() {
+                                                                                     System.out.println(“click on New”);
+                                                                                  }
+                                                                                   }
+Public class Users{
+                                  Public static void main(String args[]){
+                                                                                                        Windows w1=new w1();
+                                                                                                         w1.open();
+                                                                                                         w1.New();
+                                                                                                    }
+                                }
+
+                                                                                
+
+2)Can we override static method of a interface?
+Ans:
+Static Methods in Interface are defined with the keyword static. These static methods contain the complete definition of the function, therefore these methods cannot be overridden or changed in the implementation class.
+
+
+
+3)Interface I
+   {
+            Public abstract  I();
+    }
+    Interface I2{
+                Public abstract I2();
+                        }
+                         Class A{
+                                      A(){
+                                                 System.out.println(“Hello world”);
+
+                                            }
+                                       }
+    Class B extends A implements I2
+     {
+                       B(){
+                        System.out.println(“B”);
+                             }
+      }
+      Class Sample(){
+                                   Public static void main(String args[]){
+                               
+                                                      B ob=new B();
+                                                      System.out.println(ob instanceof B);
+                                                      System.out.println(ob instanceof A);
+                                                   }
+  }
+Output: Hello world
+             B
+              Hello world
+             
+            
+
